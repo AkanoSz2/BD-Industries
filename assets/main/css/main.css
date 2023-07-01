@@ -1,0 +1,481 @@
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background-color: lightskyblue;
+}
+/* Welcome Page */
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  background-color: lightslategray;
+}
+.section1 {
+  display: flex;
+  flex-direction: column;
+  background-image: url('/assets/content/img/backgrounds/fn_bg.png');
+  background-position: initial;
+}
+.title, .bd_title {
+  display: flex;
+  justify-content: center;
+  color: rgb(25, 209, 71);
+  margin: 0;
+  text-decoration: underline;
+  font-family: 'Bruno Ace', cursive;
+  font-size: 36px;
+}
+.title {
+  animation: title-animation 5s ease-in-out infinite;
+}
+.bd_title {
+  color: red;
+  text-decoration: none;
+  font-size: 55px;
+}
+.image-welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.png {
+  height: 395px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: -25px;
+  padding-bottom: -2000px;
+}
+.front-fm {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: -200px;
+  padding-bottom: -10px;
+}
+#walking_nova_alt {
+  display: none;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 32px;
+}
+.welcome-button-class {
+  display: flex;
+  align-items: center;
+}
+#Play {
+  height: 50px;
+  width: 300px;
+  font-size: 32px;
+  border-radius: 10px;
+}
+.section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  margin-top: -45px;
+}
+.canvas-container {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.street-canva {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+}
+.street-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.street-image {
+  max-width: 100%;
+  height: auto;
+}
+/* Play main */
+.play-main {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  min-height: 625px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  background-image: url('/assets/content/img/backgrounds/play_section.jpg');
+  background-size: cover;
+}
+.button-playground {
+  display: flex;
+  flex-direction: column;
+}
+#back, #back-audio {
+  margin-top: 40px;
+}
+.bottom-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* Media Queries */
+@media (max-width: 767px) {
+ /* Styles for screens with a maximum width of 767px (mobile devices) */
+  .png {
+      height: 200px;
+ }
+  .front-fm {
+      height: 200px;
+ }
+  .title {
+      font-size: 24px;
+ }
+  .bd_title {
+      font-size: 36px;
+ }
+  button {
+      height: 40px;
+      width: 200px;
+      font-size: 24px;
+ }
+  #Play {
+      height: 40px;
+      width: 200px;
+      font-size: 24px;
+ }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+ /* Styles for screens with a minimum width of 768px and maximum width of 1023px (tablets) */
+  .png {
+      height: 300px;
+ }
+  .front-fm {
+      height: 300px;
+ }
+  .title {
+      font-size: 30px;
+ }
+  .bd_title {
+      font-size: 48px;
+ }
+  button {
+      height: 45px;
+      width: 250px;
+      font-size: 28px;
+ }
+  #Play {
+      height: 45px;
+      width: 250px;
+      font-size: 28px;
+ }
+}
+@media (min-width: 1024px) {
+ /* Styles for screens with a minimum width of 1024px (desktop) */
+  .png {
+      height: 395px;
+ }
+  .front-fm {
+      height: 400px;
+ }
+  .title {
+      font-size: 36px;
+ }
+  .bd_title {
+      font-size: 55px;
+ }
+  button {
+      height: 50px;
+      width: 300px;
+      font-size: 32px;
+ }
+  #Play {
+      height: 50px;
+      width: 300px;
+      font-size: 32px;
+ }
+}
+/* Audio Page */
+.audio-main {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  min-height: 625px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  background-image: url('/assets/content/img/backgrounds/play_section.jpg');
+}
+.button-playground {
+  display: flex;
+  flex-direction: column;
+}
+#back {
+  margin-top: 40px;
+}
+/* Audio Page 1 */
+.audio-page-one {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+.image-main {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+}
+.skadi, .skadi-mirror {
+  display: flex;
+  justify-content: center;
+  height: 370px;
+  object-fit: cover;
+  object-position: top;
+  animation: skadi-animation 5s linear infinite;
+  animation: skadi-flip 8s linear infinite;
+}
+.specter {
+  display: flex;
+  justify-content: center;
+  height: 380px;
+  object-fit: cover;
+  object-position: top;
+}
+.description {
+  display: flex;
+  height: 40px;
+  width: 1200px;
+  justify-content: center;
+}
+.content-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  padding-left: -10px;
+}
+.wait {
+  display: flex;
+  justify-self: start;
+  font-size: 33px;
+  margin-left: 0px;
+}
+.percentage {
+  display: flex;
+  justify-self: end;
+  margin-right: -40px;
+  font-size: 33px;
+}
+.loading {
+  display: flex;
+  align-items: center;
+}
+#progress-1 {
+  width: 320px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  accent-color: coral;
+}
+/* Audio Page 2 */
+.audio-page-two {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgreen;
+}
+#progress-2 {
+  width: 320px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  accent-color: coral;
+}
+/* Audio Page 3 */
+.audio-page-three {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightsalmon;
+}
+#progress-3 {
+  width: 320px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  accent-color: coral;
+}
+/* Audio Queue Page */
+.audio-queue {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+.progress {
+  width: 320px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  accent-color: coral;
+}
+/* Media Queries */
+@media (max-width: 576px) {
+ /* Mobile Screens */
+  .image-main {
+      flex-direction: row;
+ }
+  .skadi, .skadi-mirror, .specter {
+      height: 200px;
+ }
+  .description {
+      width: auto;
+ }
+  .content-data {
+      width: auto;
+ }
+  .wait, .percentage {
+      font-size: 20px;
+ }
+  #progress-1, #progress-2, #progress-3, #progres-queue .progress {
+      width: 100%;
+ }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+ /* Tablet Screens */
+  .image-main {
+      flex-direction: row;
+ }
+  .skadi, .skadi-mirror, .specter {
+      height: 200px;
+ }
+  .description {
+      width: auto;
+ }
+  .content-data {
+      width: auto;
+ }
+  .wait, .percentage {
+      font-size: 20px;
+ }
+  #progress-1, #progress-2, #progress-3, #progres-queue .progress {
+      width: 100%;
+ }
+}
+@media (min-width: 993px) {
+ /* Desktop Screens */
+  .image-main {
+      flex-direction: row;
+ }
+  .skadi, .skadi-mirror {
+      height: 370px;
+ }
+  .specter {
+      height: 380px;
+ }
+  .description {
+      width: 1200px;
+ }
+  .content-data {
+      width: 300px;
+ }
+  .wait, .percentage {
+      font-size: 33px;
+ }
+  #progress-1, #progress-2, #progress-3, #progres-queue .progress {
+      width: 320px;
+ }
+}
+/* animations */
+@keyframes title-animation {
+  0% {
+      transform: scale(1, 1);
+ }
+  50% {
+      transform: scale(1.25, 1.25);
+ }
+  100% {
+      transform: scale(1, 1);
+ }
+}
+@keyframes skadi-animation {
+  0% {
+      transform: scale(1, 1);
+ }
+  50% {
+      transform: scale(1.25, 1.25);
+ }
+  100% {
+      transform: scale(1, 1);
+ }
+}
+@keyframes skadi-flip {
+  20% {
+      transform: rotateY(0);
+ }
+  40% {
+      transform: rotateY(90deg);
+ }
+  60% {
+      transform: rotateY(180deg);
+ }
+  80% {
+      transform: rotateY(120deg);
+ }
+  100% {
+      transform: rotateY(0);
+ }
+}
+@keyframes slide-in {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+ }
+  100% {
+      transform: translateY(100%);
+      opacity: 0;
+ }
+}
+.slide-in {
+  animation-name: slide-in;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes badescu_summon {
+  0% {
+      opacity: 0;
+ }
+  20% {
+      opacity: 0;
+ }
+  60% {
+      opacity: 0.4;
+ }
+  100% {
+      opacity: 1;
+ }
+}
